@@ -28,3 +28,11 @@ Once trained, the model is saved for later use in the backend API. The saved mod
 3. **Prediction**: When a request is made to the API with a news article, the backend uses the trained model to predict if the article is real or fake and returns the result.
 
 This project demonstrates how machine learning can be used to solve real-world problems such as detecting fake news. It provides a simple, scalable backend solution that can be expanded for use in a full-fledged application.
+
+## Acknowledgements
+
+This project uses the [LIAR dataset](https://www.cs.ucsb.edu/~william/data/liar_dataset.zip), which contains labeled statements for the task of fake news detection.
+
+### Citation:
+
+*William Yang Wang. "LIAR: A Benchmark Dataset for Fake News Detection." *Proceedings of the 55th Annual Meeting of the Association for Computational Linguistics (ACL 2017).* Available at [arXiv](https://arxiv.org/abs/1705.00648).*
