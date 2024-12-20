@@ -1,24 +1,30 @@
-# Fake News Visualizer
+# Fake News Detection API
 
-A web application to visualize and analyze fake news detection results, built with React for the frontend and Python (Flask/Django) for the backend. The project aims to provide real-time insights into fake news data using machine learning models and allow users to interact with the data through an intuitive interface.
+This project is a backend solution for detecting fake news using machine learning. The model is trained on data in the `data` folder, and the backend API allows users to locally query the model to predict whether a given news article is real or fake.
 
 ## Project Overview
-This project is designed to identify and visualize fake news in various formats (text, articles, etc.) using machine learning techniques. The backend implements an AI/ML model to classify news articles, while the frontend provides an interactive dashboard to view the results. This project demonstrates how to combine machine learning, web development, and data visualization for impactful societal change.
+The goal of this project is to provide an API that leverages machine learning for fake news detection. It trains a machine learning model based on a dataset of news articles, which is then used to predict whether a given piece of news is real or fake.
 
-### Features
-- Real-time fake news detection
-- Interactive dashboard displaying categorized news data
-- User-friendly interface with visualizations of detection accuracy and trends
-- Backend integration for processing and updating news data
+- The model is stored in the `model` folder, where it is trained using the data from the `data` folder.
+- Once the model is trained, it is saved and used in the `backend` folder, where the Flask-based API is created to serve predictions.
 
 ## Technologies Used
-- **Frontend**: 
-  - React.js
-  - React-Router for routing
-  - Chart.js or D3.js for visualizations
-  - Axios for making API requests
+- **Flask**: A lightweight web framework for Python used to create the API that allows users to query the model.
+- **Python**: The primary language used for both the machine learning model and the API backend.
+- **Machine Learning Libraries**: 
+  - **scikit-learn**: A popular library for machine learning in Python used for model training and evaluation.
+  - **TensorFlow** or **Keras**: These libraries are used for more advanced machine learning models (if applicable).
+- **Pandas** and **NumPy**: Libraries for data manipulation and processing.
+- **Joblib** or **Pickle**: Libraries for saving and loading the trained model for use in predictions.
 
-- **Backend**: 
-  - Flask/Django (depends on your setup)
-  - Machine Learning model for fake news detection (e.g., TensorFlow, scikit-learn)
-  - Python (for backend APIs and model interaction)
+## Model Training
+The model is trained using a dataset stored in the `data` folder. The training process involves preprocessing the text data, converting it into numerical features, and using machine learning algorithms to classify news articles as either real or fake.
+
+Once trained, the model is saved for later use in the backend API. The saved model can be loaded into the Flask app, which uses it to predict the authenticity of news articles based on user input.
+
+## How It Works
+1. **Training**: The model is trained using data from the `data` folder.
+2. **API**: The backend API is built using Flask and exposes endpoints for querying the trained model.
+3. **Prediction**: When a request is made to the API with a news article, the backend uses the trained model to predict if the article is real or fake and returns the result.
+
+This project demonstrates how machine learning can be used to solve real-world problems such as detecting fake news. It provides a simple, scalable backend solution that can be expanded for use in a full-fledged application.
