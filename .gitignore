@@ -1,0 +1,12 @@
+# Ignore Python virtual environments
+venv/
+
+# Ignore model folder and large files in it
+model/fake_news_bert_model/
+model/fake_news_bert_tokenizer/
+model/fake_news_logreg_model.pkl
+model/fake_news_rf_model.pkl
+model/fake_news_bert_model/model.safetensors
+model/.DS_Store
+
+venv/lib/python3.10/site-packages/torch/lib/libtorch_cpu.dylib
